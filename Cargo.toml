@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Emiliyan Gospodinov"]
 license = "CC BY-NC"
-
+description = "A small library that allows creation of ffmpeg command string via rust."
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
