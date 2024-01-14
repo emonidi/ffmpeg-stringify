@@ -1,6 +1,6 @@
 [package]
 name = "ffmpeg-stringify"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Emiliyan Gospodinov"]
 license = "CC-BY-NC-4.0"
