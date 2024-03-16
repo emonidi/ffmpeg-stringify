@@ -13,9 +13,6 @@ pub struct Filter{
     pub options:FilterOptions
 }
 
-
-
-
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct FilterNode{
     pub name:String,

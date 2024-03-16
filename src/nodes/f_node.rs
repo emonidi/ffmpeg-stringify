@@ -33,4 +33,3 @@ impl From<FilterNode> for FNode{
         }
     }
 }
-

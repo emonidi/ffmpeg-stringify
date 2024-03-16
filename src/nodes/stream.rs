@@ -10,5 +10,6 @@ pub enum StreamType {
 pub struct Stream{
     pub path:String,
     pub name:String,
-    pub stream_type:StreamType
+    pub stream_type:StreamType,
+    pub inputs:Option<Vec<String>>
 }
