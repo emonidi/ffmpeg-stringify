@@ -38,7 +38,7 @@ pub fn stringify(nodes: Vec<FNodeType>) -> String {
             FNodeType::FilterNode(node) => true,
             _ => false,
         })
-        .map(|node| formatOperation(Into::<FilterNode>::into(node.clone())))
+        .map(|node| format_operation(Into::<FilterNode>::into(node.clone())))
         .collect::<Vec<String>>()
         .join(";");
 
@@ -98,7 +98,7 @@ pub fn format_filter(filters: Vec<Filter>) -> String {
     filters.join(",")
 }
 
-pub fn formatOperation(filterNode: FilterNode) -> String {
+pub fn format_operation(filterNode: FilterNode) -> String {
     let ins = filterNode
         .inputs
         .into_iter()
@@ -213,6 +213,6 @@ mod tests {
             FNodeType::Stream(output),
         ]);
         println!("{:?}", string);
-        assert_eq!(string, "-i /data/vid.mp4 -filter_complex '[0:v]fade=type=in:st=0:duration=1,scale=512:-2' /data/vid-modified.mp4".to_string());
+        assert_eq!(string, "-i ./data/vid.mp4 -i ./data/sound.mp3 -filter_complex '[0:v]trim=duration=4[out0];[1:a]atrim=duration=4[trimmed_audio];[trimmed_audio]volume=1[audio]'  -map '[audio]' -map '[out0]' ./data/vid-modified.mp4".to_string());
     }
 }
