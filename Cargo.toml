@@ -1,6 +1,6 @@
 [package]
 name = "ffmpeg-stringify"
-version = "0.1.1"
+version = "0.2.1"
 edition = "2021"
 authors = ["Emiliyan Gospodinov"]
 license = "CC-BY-NC-4.0"
@@ -10,5 +10,5 @@ description = "A small library that allows creation of ffmpeg command string via
 
 [dependencies]
 map-macro = "0.2.6"
-serde= {version = "1.0.195", features = ["derive"]}
-serde_json="1.0.111"
+serde = { version = "1.0.195", features = ["derive"] }
+serde_json = "1.0.111"
