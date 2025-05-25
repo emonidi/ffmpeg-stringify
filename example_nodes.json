@@ -1,0 +1,36 @@
+{
+  "inputStreamExample": {
+    "path": "input.mp4",
+    "name": "raw_video",
+    "stream_type": "Input",
+    "inputs": null
+  },
+  "filterNodeExample": {
+    "name": "scaler",
+    "inputs": [
+      "raw_video:v"
+    ],
+    "outputs": [
+      "scaled_video"
+    ],
+    "filters": [
+      {
+        "name": "scale",
+        "options": {
+          "HashMap": {
+            "width": "1280",
+            "height": "720"
+          }
+        }
+      }
+    ]
+  },
+  "outputStreamExample": {
+    "path": "output_scaled.mp4",
+    "name": "final_output",
+    "stream_type": "Output",
+    "inputs": [
+      "scaled_video"
+    ]
+  }
+}
